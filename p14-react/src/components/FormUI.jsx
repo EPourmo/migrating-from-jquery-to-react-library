@@ -77,9 +77,15 @@ const FormUI = () => {
             options={departmentData}
           />
         </Form.Item>
-        <Form.Item>
+        <Form.Item
+          wrapperCol={{
+            span: 7,
+            offset: 10,
+          }}
+        >
           <Button
             htmlType="submit"
+            color="black"
             onClick={() => {
               setModalOpen(true);
             }}
