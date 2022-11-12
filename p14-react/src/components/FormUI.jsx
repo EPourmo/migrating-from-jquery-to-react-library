@@ -1,8 +1,9 @@
-import { Button, Form, InputNumber, Select } from "antd";
+import { Button, Form, InputNumber, message, Select } from "antd";
 import "antd/dist/antd.css";
 import { stateData, departmentData, forItemData } from "../formData";
 import Components from "../formData";
-import Modal from "react-modal-oc-p14";
+// import Modal from "react-modal-oc-p14";
+import Modal from "./Modal";
 import { useState } from "react";
 
 const FormUI = () => {
@@ -65,7 +66,6 @@ const FormUI = () => {
         <Form.Item
           wrapperCol={{
             span: 7,
-            offset: 10,
           }}
         >
           <Button
@@ -79,7 +79,9 @@ const FormUI = () => {
           </Button>
         </Form.Item>
       </Form>
-      {modalOpen && <Modal setOpenModal={setModalOpen} />}
+      {modalOpen && (
+        <Modal setOpenModal={setModalOpen} message={"Employee Created!"} />
+      )}
     </>
   );
 };
