@@ -1,6 +1,7 @@
-import { Button, DatePicker, Form, Input, InputNumber, Select } from "antd";
+import { Button, Form, InputNumber, Select } from "antd";
 import "antd/dist/antd.css";
-import { stateData, departmentData } from "../formData";
+import { stateData, departmentData, forItemData } from "../formData";
+import Components from "../formData";
 import Modal from "react-modal-oc-p14";
 import { useState } from "react";
 
@@ -10,6 +11,7 @@ const FormUI = () => {
   };
 
   const [modalOpen, setModalOpen] = useState(false);
+
   return (
     <>
       <Form
@@ -23,24 +25,7 @@ const FormUI = () => {
         size="large"
         onFinish={getData}
       >
-        <Form.Item label="First Name" name="firstName">
-          <Input />
-        </Form.Item>
-        <Form.Item label="Last Name" name="lastName">
-          <Input />
-        </Form.Item>
-        <Form.Item label="Date of Birth" name="birth">
-          <DatePicker />
-        </Form.Item>
-        <Form.Item label="Start Date" name="startDate">
-          <DatePicker />
-        </Form.Item>
-        <Form.Item label="Street" name="street">
-          <Input />
-        </Form.Item>
-        <Form.Item label="City" name="city">
-          <Input />
-        </Form.Item>
+        {forItemData.map((block) => Components(block))}
         <Form.Item label="State" name="state">
           <Select
             showSearch

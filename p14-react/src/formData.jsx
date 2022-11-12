@@ -1,3 +1,6 @@
+import { DatePicker, Form, Input } from "antd";
+import React from "react";
+
 export const stateData = [
   {
     label: "Alabama",
@@ -259,3 +262,63 @@ export const departmentData = [
     value: "5",
   },
 ];
+
+export const forItemData = [
+  {
+    name: "firstName",
+    label: "First name",
+    component: "input",
+    index: 1,
+  },
+  {
+    name: "lastName",
+    label: "Last name",
+    component: "input",
+    index: 2,
+  },
+
+  {
+    name: "birth",
+    label: "Date of Birth",
+    component: "datePick",
+    index: 3,
+  },
+
+  {
+    name: "startDate",
+    label: "Start Date",
+    component: "datePick",
+    index: 4,
+  },
+  {
+    name: "street",
+    label: "Street",
+    component: "input",
+    index: 5,
+  },
+  {
+    name: "city",
+    label: "City",
+    component: "input",
+    index: 6,
+  },
+];
+
+const Components = {
+  input: Input,
+  datePick: DatePicker,
+};
+
+export default (block) => {
+  if (typeof Components[block.component] !== "undefined") {
+    return (
+      <Form.Item label={block.label} name={block.name} key={block.index}>
+        {React.createElement(Components[block.component])}
+      </Form.Item>
+    );
+  }
+  return React.createElement(
+    () => <div>The component {block.component} has not been created yet.</div>,
+    { key: block._uid }
+  );
+};
