@@ -1,7 +1,7 @@
 import Header from "./components/Header";
 import Title from "./components/Title";
 import FormUI from "./components/FormUI";
-import Table from "./components/Table";
+import TableUI from "./components/TableUI";
 import Error from "./components/Error";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -13,7 +13,7 @@ function App() {
         <Title />
         <Routes>
           <Route path="/" element={<FormUI />} />
-          <Route path="/employees" element={<Table />} />
+          <Route path="/employees" element={<TableUI />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </div>
