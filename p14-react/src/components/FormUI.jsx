@@ -41,11 +41,12 @@ const FormUI = () => {
   return (
     <>
       <Form
-        labelCol={{
-          span: 10,
+        style={{
+          maxWidth: "500px",
+          margin: "0 auto",
         }}
-        wrapperCol={{
-          span: 7,
+        labelCol={{
+          span: 5,
         }}
         layout="horizontal"
         size="large"
@@ -118,7 +119,7 @@ const FormUI = () => {
         </Form.Item>
         <Form.Item
           wrapperCol={{
-            span: 7,
+            offset: 5,
           }}
           shouldUpdate
         >
@@ -126,6 +127,7 @@ const FormUI = () => {
             <Button
               htmlType="submit"
               color="black"
+              block
               disabled={
                 !form.isFieldsTouched(true) ||
                 form.getFieldsError().filter(({ errors }) => errors.length)

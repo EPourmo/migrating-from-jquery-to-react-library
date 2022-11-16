@@ -96,6 +96,8 @@ const TableUI = () => {
         style={{
           width: 300,
           marginBottom: 20,
+          display: "flex",
+          marginLeft: "auto",
         }}
         onChange={(e) => setSearch(e.target.value)}
       />
