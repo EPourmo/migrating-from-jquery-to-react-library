@@ -5,35 +5,37 @@ import { testDataForm } from "../testDataForm";
 const TableUI = () => {
   const [search, setSearch] = useState("");
 
+  const globalFilter = (value, record) => {
+    return (
+      record.firstName.toLowerCase().includes(value.toLowerCase()) ||
+      record.lastName.toLowerCase().includes(value.toLowerCase()) ||
+      String(record.startDate)
+        .toLocaleLowerCase()
+        .includes(value.toLocaleLowerCase()) ||
+      record.department.toLowerCase().includes(value.toLowerCase()) ||
+      String(record.birth)
+        .toLocaleLowerCase()
+        .includes(value.toLocaleLowerCase()) ||
+      String(record.street)
+        .toLocaleLowerCase()
+        .includes(value.toLocaleLowerCase()) ||
+      record.city.toLowerCase().includes(value.toLowerCase()) ||
+      record.state.toLowerCase().includes(value.toLowerCase()) ||
+      record.department.toLowerCase().includes(value.toLowerCase()) ||
+      String(record.zipCode)
+        .toLocaleLowerCase()
+        .includes(value.toLocaleLowerCase())
+    );
+  };
+
   const columns = [
     {
       title: "First Name",
-      dataIndex: "firtName",
-      key: "firtName",
-      sorter: (a, b) => a.firtName.localeCompare(b.firtName),
+      dataIndex: "firstName",
+      key: "firstName",
+      sorter: (a, b) => a.firstName.localeCompare(b.firstName),
       filteredValue: [search],
-      onFilter: (value, record) => {
-        return (
-          record.firtName.toLowerCase().includes(value.toLowerCase()) ||
-          record.lastName.toLowerCase().includes(value.toLowerCase()) ||
-          String(record.startDate)
-            .toLocaleLowerCase()
-            .includes(value.toLocaleLowerCase()) ||
-          record.department.toLowerCase().includes(value.toLowerCase()) ||
-          String(record.birth)
-            .toLocaleLowerCase()
-            .includes(value.toLocaleLowerCase()) ||
-          String(record.street)
-            .toLocaleLowerCase()
-            .includes(value.toLocaleLowerCase()) ||
-          record.city.toLowerCase().includes(value.toLowerCase()) ||
-          record.state.toLowerCase().includes(value.toLowerCase()) ||
-          record.department.toLowerCase().includes(value.toLowerCase()) ||
-          String(record.zipCode)
-            .toLocaleLowerCase()
-            .includes(value.toLocaleLowerCase())
-        );
-      },
+      onFilter: (value, record) => globalFilter(value, record),
     },
     {
       title: "Last Name",
@@ -57,7 +59,7 @@ const TableUI = () => {
       title: "Date of Birth",
       dataIndex: "birth",
       key: "birth",
-      sorter: (a, b) => a.birth - b.birth,
+      sorter: (a, b) => a.birth.localeCompare(b.birth),
     },
     {
       title: "Street",
