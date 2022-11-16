@@ -4,262 +4,321 @@ import React from "react";
 export const stateData = [
   {
     label: "Alabama",
-    value: "1",
+    value: "Alabama",
+    key: "1",
   },
   {
     label: "Alaska",
-    value: "2",
+    value: "Alaska",
+    key: "2",
   },
   {
     label: "American Samoa",
-    value: "3",
+    value: "American Samoa",
+    key: "3",
   },
   {
     label: "Arizona",
-    value: "4",
+    value: "Arizona",
+    key: "4",
   },
   {
     label: "Arkansas",
-    value: "5",
+    value: "Arkansas",
+    key: "5",
   },
   {
     label: "California",
-    value: "6",
+    valuevalue: "California",
+    key: "6",
   },
   {
     label: "Colorado",
-    value: "7",
+    value: "Colorado",
+    key: "7",
   },
   {
     label: "Connecticut",
-    value: "8",
+    value: "Connecticut",
+    key: "8",
   },
   {
     label: "Delaware",
-    value: "9",
+    value: "Delaware",
+    key: "9",
   },
   {
     label: "District Of Columbia",
-    value: "10",
+    value: "District Of Columbia",
+    key: "10",
   },
   {
     label: "Federated States Of Micronesia",
-    value: "11",
+    value: "Federated States Of Micronesia",
+    key: "11",
   },
   {
     label: "Florida",
-    value: "12",
+    value: "Florida",
+    key: "12",
   },
   {
     label: "Georgia",
-    value: "13",
+    value: "Georgia",
+    key: "13",
   },
   {
     label: "Guam",
-    value: "14",
+    value: "Guam",
+    key: "14",
   },
   {
     label: "Hawaii",
-    value: "15",
+    value: "Hawaii",
+    key: "15",
   },
   {
     label: "Idaho",
-    value: "16",
+    value: "Idaho",
+    key: "16",
   },
   {
     label: "Illinois",
-    value: "17",
+    value: "Illinois",
+    key: "17",
   },
   {
     label: "Indiana",
-    value: "18",
+    value: "Indiana",
+    key: "18",
   },
   {
     label: "Iowa",
-    value: "19",
+    value: "Iowa",
+    key: "19",
   },
   {
     label: "Kansas",
-    value: "20",
+    value: "Kansas",
+    key: "20",
   },
   {
     label: "Kentucky",
-    value: "21",
+    value: "Kentucky",
+    key: "21",
   },
   {
     label: "Louisiana",
-    value: "22",
+    value: "Louisiana",
+    key: "22",
   },
   {
     label: "Maine",
-    value: "23",
+    value: "Maine",
+    key: "23",
   },
   {
     label: "Marshall Islands",
-    value: "24",
+    value: "Marshall Islands",
+    key: "24",
   },
   {
     label: "Maryland",
-    value: "25",
+    value: "Maryland",
+    key: "25",
   },
   {
     label: "Massachusetts",
-    value: "26",
+    value: "Massachusetts",
+    key: "26",
   },
   {
     label: "Michigan",
-    value: "27",
+    value: "Michigan",
+    key: "27",
   },
   {
     label: "Minnesota",
-    value: "28",
+    value: "Minnesota",
+    key: "28",
   },
   {
     label: "Mississippi",
-    value: "29",
+    value: "Mississippi",
+    key: "29",
   },
   {
     label: "Missouri",
-    value: "30",
+    value: "Missouri",
+    key: "30",
   },
   {
     label: "Montana",
-    value: "31",
+    value: "Montana",
+    key: "31",
   },
   {
     label: "Nebraska",
-    value: "32",
+    value: "Nebraska",
+    key: "32",
   },
   {
     label: "Nevada",
-    value: "33",
+    value: "Nevada",
+    key: "33",
   },
   {
     label: "New Hampshire",
-    value: "34",
+    value: "New Hampshire",
+    key: "34",
   },
   {
     label: "New Jersey",
-    value: "35",
+    value: "New Jersey",
+    key: "35",
   },
   {
     label: "New Mexico",
-    value: "36",
+    value: "New Mexico",
+    key: "36",
   },
   {
     label: "New York",
-    value: "37",
+    value: "New York",
+    key: "37",
   },
   {
     label: "North Carolina",
-    value: "38",
+    value: "North Carolina",
+    key: "38",
   },
   {
     label: "North Dakota",
-    value: "39",
+    value: "North Dakota",
+    key: "39",
   },
   {
     label: "Northern Mariana Islands",
-    value: "40",
+    value: "Northern Mariana Islands",
+    key: "40",
   },
   {
     label: "Ohio",
-    value: "41",
+    value: "Ohio",
+    key: "41",
   },
   {
     label: "Oklahoma",
-    value: "42",
+    value: "Oklahoma",
+    key: "42",
   },
   {
     label: "Oregon",
-    value: "43",
+    value: "Oregon",
+    key: "43",
   },
   {
     label: "Palau",
-    value: "44",
+    value: "Palau",
+    key: "44",
   },
   {
     label: "Pennsylvania",
-    value: "45",
+    value: "Pennsylvania",
+    key: "45",
   },
   {
     label: "Puerto Rico",
-    value: "46",
+    value: "Puerto Rico",
+    key: "46",
   },
   {
     label: "Rhode Island",
-    value: "47",
+    value: "Rhode Island",
+    key: "47",
   },
   {
     label: "South Carolina",
-    value: "48",
+    value: "South Carolina",
+    key: "48",
   },
   {
     label: "South Dakota",
-    value: "49",
+    value: "South Dakota",
+    key: "49",
   },
   {
     label: "Tennessee",
-    value: "50",
+    value: "Tennessee",
+    key: "50",
   },
   {
     label: "Texas",
-    value: "51",
+    value: "Texas",
+    key: "51",
   },
   {
     label: "Utah",
-    value: "52",
+    value: "Utah",
+    key: "52",
   },
   {
     label: "Vermont",
-    value: "53",
+    value: "Vermont",
+    key: "53",
   },
   {
     label: "Virgin Islands",
-    value: "54",
+    value: "Virgin Islands",
+    key: "54",
   },
   {
     label: "Virginia",
-    value: "55",
+    value: "Virginia",
+    key: "55",
   },
   {
     label: "Washington",
-    value: "56",
+    value: "Washington",
+    key: "56",
   },
   {
     label: "West Virginia",
-    value: "57",
+    value: "West Virginia",
+    key: "57",
   },
   {
     label: "Wisconsin",
-    value: "58",
+    value: "Wisconsin",
+    key: "58",
   },
   {
     label: "Wyoming",
-    value: "59",
+    value: "Wyoming",
+    key: "59",
   },
 ];
 
 export const departmentData = [
   {
     label: "Sales",
-    value: "1",
+    value: "Sales",
   },
   {
     label: "Marketing",
-    value: "2",
+    value: "Marketing",
   },
   {
     label: "Engineering",
-    value: "3",
+    value: "Engineering",
   },
   {
     label: "Human Resources",
-    value: "4",
+    value: "Human Resources",
   },
   {
     label: "Legal",
-    value: "5",
+    value: "Legal",
   },
 ];
 
@@ -312,7 +371,17 @@ const Components = {
 export default (block) => {
   if (typeof Components[block.component] !== "undefined") {
     return (
-      <Form.Item label={block.label} name={block.name} key={block.index}>
+      <Form.Item
+        label={block.label}
+        name={block.name}
+        key={block.index}
+        rules={[
+          {
+            required: true,
+            message: `Please input your ${block.label}!`,
+          },
+        ]}
+      >
         {React.createElement(Components[block.component])}
       </Form.Item>
     );
