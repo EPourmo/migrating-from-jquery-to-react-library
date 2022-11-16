@@ -10,7 +10,7 @@ function App() {
   return (
     <EmployeeContextProvider>
       <Router>
-        <div className="m-4">
+        <div className="p-4">
           <Routes>
             <Route
               path="/"

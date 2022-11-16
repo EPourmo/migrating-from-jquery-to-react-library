@@ -94,7 +94,7 @@ const TableUI = () => {
       <Input
         placeholder="Search information"
         style={{
-          width: 300,
+          maxWidth: 350,
           marginBottom: 20,
           display: "flex",
           marginLeft: "auto",
@@ -110,6 +110,9 @@ const TableUI = () => {
         }}
         columns={columns}
         dataSource={employees}
+        scroll={{
+          x: 900,
+        }}
       />
     </>
   );
