@@ -11,11 +11,27 @@ function App() {
     <EmployeeContextProvider>
       <Router>
         <div className="m-4">
-          <Header />
-          <Title />
           <Routes>
-            <Route path="/" element={<FormUI />} />
-            <Route path="/employees" element={<TableUI />} />
+            <Route
+              path="/"
+              element={
+                <>
+                  <Header text="View current employee" />
+                  <Title title="Create Employee" />
+                  <FormUI />
+                </>
+              }
+            />
+            <Route
+              path="/employees"
+              element={
+                <>
+                  <Header text="Go to Homepage" />
+                  <Title title="Current Employees" />
+                  <TableUI />
+                </>
+              }
+            />
             <Route path="*" element={<Error />} />
           </Routes>
         </div>

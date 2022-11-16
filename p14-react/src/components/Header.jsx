@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ text }) => {
   return (
     <nav className="flex justify-between items-center">
       <Link to="/" className="font-lobster text-7xl text-primary">
@@ -10,7 +10,7 @@ const Header = () => {
         to="/employees"
         className="text-primary px-3 py-1.5 rounded-lg border-2 border-primary font-bold hover:scale-105 uppercase"
       >
-        View current employee
+        {text}
       </Link>
     </nav>
   );

@@ -38,8 +38,6 @@ const FormUI = () => {
     form.resetFields();
   };
 
-  console.log(employees);
-
   return (
     <>
       <Form
