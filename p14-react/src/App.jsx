@@ -16,7 +16,7 @@ function App() {
               path="/"
               element={
                 <>
-                  <Header text="View current employee" />
+                  <Header text="View current employee" homepage={true} />
                   <Title title="Create Employee" />
                   <FormUI />
                 </>
@@ -26,7 +26,7 @@ function App() {
               path="/employees"
               element={
                 <>
-                  <Header text="Go to Homepage" />
+                  <Header text="Go to Homepage" homepage={false} />
                   <Title title="Current Employees" />
                   <TableUI />
                 </>
