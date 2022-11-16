@@ -4,11 +4,12 @@ import { stateData, departmentData, forItemData } from "../formData";
 import Components from "../formData";
 // import Modal from "react-modal-oc-p14";
 import Modal from "./Modal";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { EmployeeContext } from "../context/EmployeeContext";
 
 const FormUI = () => {
   const [modalOpen, setModalOpen] = useState(false);
-  const [employees, setEmployees] = useState([]);
+  const { employees, addEmployee } = useContext(EmployeeContext);
   const [form] = Form.useForm();
 
   const getData = (e) => {
@@ -22,7 +23,7 @@ const FormUI = () => {
     const birthYear = birthDate.getFullYear();
     const newEmployee = {
       key: employees.length + 1,
-      firtName: e.firstName,
+      firstName: e.firstName,
       lastName: e.lastName,
       startDate: `${strYear}/${strMonth + 1}/${strDay}`,
       department: e.department,
@@ -32,13 +33,13 @@ const FormUI = () => {
       state: e.state,
       zipCode: e.zip,
     };
-
-    setEmployees((prevEmployee) => [...prevEmployee, newEmployee]);
+    addEmployee(newEmployee);
 
     form.resetFields();
   };
 
   console.log(employees);
+
   return (
     <>
       <Form

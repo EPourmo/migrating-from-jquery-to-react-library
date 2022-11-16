@@ -1,9 +1,11 @@
 import { Table, Input } from "antd";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { testDataForm } from "../testDataForm";
+import { EmployeeContext } from "../context/EmployeeContext";
 
 const TableUI = () => {
   const [search, setSearch] = useState("");
+  const { employees } = useContext(EmployeeContext);
 
   const globalFilter = (value, record) => {
     return (
@@ -105,7 +107,7 @@ const TableUI = () => {
             `Showing ${range[0]} to ${range[1]} of ${total} entries`,
         }}
         columns={columns}
-        dataSource={testDataForm}
+        dataSource={employees}
       />
     </>
   );
