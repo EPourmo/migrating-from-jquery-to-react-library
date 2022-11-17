@@ -118,9 +118,6 @@ const FormUI = () => {
           />
         </Form.Item>
         <Form.Item
-          // wrapperCol={{
-          //   offset: 5,
-          // }}
           style={{
             maxWidth: "200px",
             margin: "60px auto 0",
