@@ -2,8 +2,7 @@ import { Button, Form, InputNumber, Select } from "antd";
 import "antd/dist/antd.css";
 import { stateData, departmentData, forItemData } from "../formData";
 import Components from "../formData";
-// import Modal from "react-modal-oc-p14";
-import Modal from "./Modal";
+import Modal from "@epourmo/react-modal-oc-p14-npm-package";
 import { useState, useContext } from "react";
 import { EmployeeContext } from "../context/EmployeeContext";
 
