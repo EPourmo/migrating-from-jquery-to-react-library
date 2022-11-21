@@ -12,11 +12,34 @@ function App() {
       <Router>
         <div className="p-4">
           <Header />
-          <Title />
           <Routes>
-            <Route path="/" element={<FormUI />} />
-            <Route path="/employees" element={<TableUI />} />
-            <Route path="*" element={<Error />} />
+            <Route
+              path="/"
+              element={
+                <>
+                  <Title text="Create Employee" />
+                  <FormUI />
+                </>
+              }
+            />
+            <Route
+              path="/employees"
+              element={
+                <>
+                  <Title text="Current Employees" />
+                  <TableUI />
+                </>
+              }
+            />
+            <Route
+              path="*"
+              element={
+                <>
+                  <Title text="Error 404" />
+                  <Error />
+                </>
+              }
+            />
           </Routes>
         </div>
       </Router>
