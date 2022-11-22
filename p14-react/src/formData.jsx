@@ -1,6 +1,7 @@
 import { DatePicker, Form, Input } from "antd";
 import React from "react";
 
+// state form data
 export const stateData = [
   {
     label: "Alabama",
@@ -299,6 +300,7 @@ export const stateData = [
   },
 ];
 
+// department form data
 export const departmentData = [
   {
     label: "Sales",
@@ -322,6 +324,7 @@ export const departmentData = [
   },
 ];
 
+// form inputs and datepickers data
 export const forItemData = [
   {
     name: "firstName",
@@ -363,11 +366,15 @@ export const forItemData = [
   },
 ];
 
+// type of component
 const Components = {
   input: Input,
   datePick: DatePicker,
 };
 
+/**
+ * function that return antd inputs or datePickers components
+ */
 export default (block) => {
   if (typeof Components[block.component] !== "undefined") {
     return (
