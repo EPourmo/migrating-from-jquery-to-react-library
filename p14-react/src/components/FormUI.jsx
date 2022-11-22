@@ -6,34 +6,45 @@ import Modal from "@epourmo/react-modal-oc-p14-npm-package";
 import { useState, useContext } from "react";
 import { EmployeeContext } from "../context/EmployeeContext";
 
+/**
+ *React component rendering Form and all related actions (save data, modal opening...)
+ */
 const FormUI = () => {
+  // Modal state
   const [modalOpen, setModalOpen] = useState(false);
+  // Employee state via context
   const { employees, addEmployee } = useContext(EmployeeContext);
+  // form data (from antd)
   const [form] = Form.useForm();
 
+  /**
+   * fonction to retrieve data from form and update employees list (context)
+   * @param {Object} e data from form
+   */
   const getData = (e) => {
     const strDate = e.startDate._d;
-    const strDay = strDate.getDate();
-    const strMonth = strDate.getMonth();
-    const strYear = strDate.getFullYear();
     const birthDate = e.birth._d;
-    const birthDay = birthDate.getDate();
-    const birthMonth = birthDate.getMonth();
-    const birthYear = birthDate.getFullYear();
+
+    // create new employee object
     const newEmployee = {
       key: employees.length + 1,
       firstName: e.firstName,
       lastName: e.lastName,
-      startDate: `${strYear}/${strMonth + 1}/${strDay}`,
+      startDate: `${strDate.getFullYear()}/${
+        strDate.getMonth() + 1
+      }/${strDate.getDate()}`,
       department: e.department,
-      birth: `${birthYear}/${birthMonth + 1}/${birthDay}`,
+      birth: `${birthDate.getFullYear()}/${
+        birthDate.getMonth() + 1
+      }/${birthDate.getDate()}`,
       street: e.street,
       city: e.city,
       state: e.state,
       zipCode: e.zip,
     };
+    // add new employee from employees list
     addEmployee(newEmployee);
-
+    // reset form inputs
     form.resetFields();
   };
 

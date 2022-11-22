@@ -4,9 +4,17 @@ import { testDataForm } from "../testDataForm";
 import { EmployeeContext } from "../context/EmployeeContext";
 
 const TableUI = () => {
+  // search state for glabal search on table
   const [search, setSearch] = useState("");
+  // list of employees from context
   const { employees } = useContext(EmployeeContext);
 
+  /**
+   * Function that determines if the row is displayed when filtered
+   * @param {String} value search input value
+   * @param {Object} record list of employees
+   * @returns {boolean} true or false if matches
+   */
   const globalFilter = (value, record) => {
     return (
       record.firstName.toLowerCase().includes(value.toLowerCase()) ||

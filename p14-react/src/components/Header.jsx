@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
+/**
+ *React component rendering Header component depending pathname data
+ */
 const Header = () => {
   const localisation = useLocation().pathname;
   return (
