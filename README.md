@@ -1,8 +1,8 @@
 # OpenClassrooms Project 14 - Migrating from jQuery to React library
 
-This repo contains all code source of a HR application. It is inspired by a jQuery code from this repository [here](https://github.com/OpenClassrooms-Student-Center/P12_Front-end)
+This repo contains all code source of a HR application. It is inspired by a jQuery code from this repository [here](https://github.com/OpenClassrooms-Student-Center/P12_Front-end) and also inside this project [here](https://github.com/EPourmo/OpenClassrooms-EP-projet-14/tree/main/jquery)
 
-The goal of this projet is to migrate from jQuery library to React library and thus reduce the technical debt of the application. It was asked to add a custom plugin, so this project uses a modal component package available [here](https://github.com/EPourmo/react-modal-oc-p14-npm-package/pkgs/npm/react-modal-oc-p14-npm-package) and also inside this project [here](https://github.com/EPourmo/OpenClassrooms-EP-projet-14/tree/main/jquery)
+The goal of this projet is to migrate from jQuery library to React library and thus reduce the technical debt of the application. It was asked to add a custom plugin, so this project uses a modal component package available [here](https://github.com/EPourmo/react-modal-oc-p14-npm-package/pkgs/npm/react-modal-oc-p14-npm-package)
 
 This project uses Ant Design for different components.
 
