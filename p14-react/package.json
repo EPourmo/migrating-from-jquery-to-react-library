@@ -1,8 +1,12 @@
 {
   "name": "p14-react",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "HRnet react application",
   "type": "module",
+  "keywords": [
+    "HRnet React"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "vite build",
